@@ -2,14 +2,17 @@ package com.example.Flash_shop.service.product;
 
 import java.util.List;
 
+import com.example.Flash_shop.dto.ProductDto;
 import com.example.Flash_shop.model.Product;
+import com.example.Flash_shop.request.AddProductRequest;
+import com.example.Flash_shop.request.ProductUpdateRequest;
 
 public interface IProductService {
-    // Product addProduct(AddProductRequest product);
+    Product addProduct(AddProductRequest product);
     Product getProductById(Long id);
     void deleteProductById(Long id);
-    // Product updateProduct(ProductUpdateRequest product, Long productId);
-    
+    Product updateProduct(ProductUpdateRequest product, Long productId);
+
     List<Product> getAllProducts();
     List<Product> getProductsByCategory(String category);
     List<Product> getProductsByBrand(String brand);
@@ -18,7 +21,7 @@ public interface IProductService {
     List<Product> getProductsByBrandAndName(String category, String name);
     Long countProductsByBrandAndName(String brand, String name);
 
-    // List<ProductDto> getConvertedProducts(List<Product> products);
+    List<ProductDto> getConvertedProducts(List<Product> products);
 
-    // ProductDto convertToDto(Product product);
+    ProductDto convertToDto(Product product);
 }
