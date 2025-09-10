@@ -22,6 +22,7 @@ public class CartItemService implements ICartItemService {
     private final IProductService productService;
     private final ICartService cartService;
 
+   
     @Override
     public void addItemToCart(Long cartId, Long productId, int quantity) {
      //1. Get the cart
@@ -47,7 +48,7 @@ public class CartItemService implements ICartItemService {
         cartItem.setTotalPrice();
         cart.addItem(cartItem);
         cartItemRepository.save(cartItem);
-        cartRepository.save(cart);
+        // cartRepository.save(cart);
     }
 
     @Override

@@ -7,5 +7,5 @@ import com.example.Flash_shop.model.Cart;
 
 @Repository
 public interface CartRepository extends JpaRepository<Cart, Long> {
-    // Cart findByUserId(Long userId);
+    Cart findByUserId(Long userId);
 }
